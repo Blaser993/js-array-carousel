@@ -20,7 +20,7 @@ img{
 }
 
 
-#active{
+.active{
     display:block;
 }
 
