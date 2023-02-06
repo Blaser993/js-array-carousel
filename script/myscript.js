@@ -4,7 +4,14 @@ console.log("ciao")
 // Al click dell’utente sulle frecce (una a sinistra e una a destra), il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente. Attenzione quando arriviamo all’ultima slide e clicchiamo sulla freccia destra, o viceversa se siamo sulla prima e clicchiamo sulla freccia sinistra.
 
 
-    
+
+document.addEventListener("click", function(){
+    document.getElementById("ernesto")
+    console.log("cambio alla seguente immagine")
+});
+
+
+
 
 
 
