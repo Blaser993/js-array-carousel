@@ -10,9 +10,9 @@ const caruselImg = ["./img/01.jpg",
 "./img/05.jpg"]
 
 
-let i
-i = caruselImg[0]
-console.log(i);
+let attivo
+attivo = caruselImg[0]
+console.log(attivo);
 
 
 
@@ -34,9 +34,12 @@ let clickDestro = ernesto.addEventListener("click", function(){
 
     for (let i = 0; i < caruselImg.length -1; i++){
         
-        
+        console.log(attivo, "indice all'inizio del ciclo for");
 
-        console.log(i);
+        attivo = attivo =+ 1
+
+        console.log(attivo,  "indice alla fine del ciclo for");
+        break;
 
 
     }
