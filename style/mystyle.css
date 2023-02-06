@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    padding: 64px;
+}
+
+img{
+    max-width:100% ;
+    display: block;
+}
+
+.slide{
+    aspect-ratio: 16/9;
+    display:none
+}
+
+#active{
+    display:block
+}
+
+
+.debug{
+    border: 2px dashed salmon;
+}
