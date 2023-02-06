@@ -9,20 +9,26 @@ body{
 }
 
 img{
-    max-width:100% ;
+    object-fit: fill;
     display: block;
+    width: 100%;
 }
 
 .slide{
-    aspect-ratio: 16/9;
-    display:none
+    display:none;
 }
 
+
 #active{
-    display:block
+    display:block;
 }
 
 
 .debug{
     border: 2px dashed salmon;
+}
+
+i{
+    filter: invert(1);
+    font-size: 24px;
 }
