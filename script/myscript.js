@@ -11,10 +11,11 @@ const caruselImg = ["./img/01.jpg",
 
 
 let attivo
-attivo = caruselImg[0]
-console.log(attivo);
+attivo = 0
+console.log(attivo, " indice all'inizio");
 
-
+let slides = document.getElementsByClassName("slide");
+console.log(slides[attivo]);
 
 document.getElementById("evaristo")
 
@@ -22,6 +23,20 @@ let clickSinistro = evaristo.addEventListener("click", function(){
     console.log("cambio alla precedente immagine");
 
 
+    if (attivo >= 4){
+        slides[attivo].classList.remove("active")
+        attivo =  attivo -5       
+        console.log(attivo)
+    } else if (attivo == -1){
+        slides[attivo].classList.remove("active")
+        attivo = 0
+        console.log(attivo)
+        slides[attivo].classList.add("active")
+    } else
+
+    slides[attivo].classList.remove("active")
+    attivo = attivo + 1
+    slides[attivo].classList.add("active")
 });
 
 
@@ -30,22 +45,29 @@ document.getElementById("ernesto")
 let clickDestro = ernesto.addEventListener("click", function(){
     console.log("cambio alla seguente immagine");
 
-     
+    
 
-    for (let i = 0; i < caruselImg.length -1; i++){
-        
-        console.log(attivo, "indice all'inizio del ciclo for");
+    if (attivo >= 4){
+        slides[attivo].classList.remove("active")
+        attivo =  attivo -5       
+        console.log(attivo)
+    } else if (attivo == -1){
+        slides[attivo].classList.remove("active")
+        attivo = 0
+        console.log(attivo)
+        slides[attivo].classList.add("active")
+    } else
 
-        attivo = attivo =+ 1
+    slides[attivo].classList.remove("active")
+    attivo = attivo + 1
+    slides[attivo].classList.add("active")
 
-        console.log(attivo,  "indice alla fine del ciclo for");
-        break;
-
-
-    }
+ 
 
 
 
+
+    console.log(attivo,  " indice alla fine della funzione");
 
 });
 
