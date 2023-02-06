@@ -9,9 +9,10 @@ body{
 }
 
 img{
-    object-fit: fill;
+
     display: block;
-    width: 100%;
+    min-width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .slide{
