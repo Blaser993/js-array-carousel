@@ -23,20 +23,19 @@ let clickSinistro = evaristo.addEventListener("click", function(){
     console.log("cambio alla precedente immagine");
 
 
-    if (attivo >= 4){
-        slides[attivo].classList.remove("active")
-        attivo =  attivo -5       
-        console.log(attivo)
-    } else if (attivo == -1){
-        slides[attivo].classList.remove("active")
-        attivo = 0
-        console.log(attivo)
-        slides[attivo].classList.add("active")
-    } else
+    
 
+
+    if (attivo === 0){
     slides[attivo].classList.remove("active")
-    attivo = attivo + 1
+    attivo = attivo + 4
     slides[attivo].classList.add("active")
+    } else if (attivo <= 4){
+        slides[attivo].classList.remove("active")
+        attivo = attivo - 1
+        slides[attivo].classList.add("active")
+    }
+
 });
 
 
@@ -45,7 +44,6 @@ document.getElementById("ernesto")
 let clickDestro = ernesto.addEventListener("click", function(){
     console.log("cambio alla seguente immagine");
 
-    
 
     if (attivo >= 4){
         slides[attivo].classList.remove("active")
