@@ -10,6 +10,7 @@ const caruselImg = ["./img/01.jpg",
 "./img/05.jpg"]
 
 
+
 let attivo
 attivo = 0
 console.log(attivo, " indice all'inizio");
@@ -22,15 +23,11 @@ document.getElementById("evaristo")
 let clickSinistro = evaristo.addEventListener("click", function(){
     console.log("cambio alla precedente immagine");
 
-
-    
-
-
     if (attivo === 0){
     slides[attivo].classList.remove("active")
-    attivo = attivo + 4
+    attivo = attivo + slides.length-1
     slides[attivo].classList.add("active")
-    } else if (attivo <= 4){
+    } else if (attivo <= slides.length-1){
         slides[attivo].classList.remove("active")
         attivo = attivo - 1
         slides[attivo].classList.add("active")
@@ -45,9 +42,9 @@ let clickDestro = ernesto.addEventListener("click", function(){
     console.log("cambio alla seguente immagine");
 
 
-    if (attivo >= 4){
+    if (attivo >= slides.length-1){
         slides[attivo].classList.remove("active")
-        attivo =  attivo -5       
+        attivo =  attivo - (slides.length)       
         console.log(attivo)
     } else if (attivo == -1){
         slides[attivo].classList.remove("active")
@@ -59,13 +56,6 @@ let clickDestro = ernesto.addEventListener("click", function(){
     slides[attivo].classList.remove("active")
     attivo = attivo + 1
     slides[attivo].classList.add("active")
-
- 
-
-
-
-
-    console.log(attivo,  " indice alla fine della funzione");
 
 });
 
